@@ -1,4 +1,7 @@
 import React from 'react'
+import DealsChart from './screen-components/DealsChart'
+import TasksChart from './screen-components/TasksChart'
+import Tasks from './screen-components/Tasks'
 
 const Screen = () => {
     return (
@@ -19,9 +22,15 @@ const Screen = () => {
 
             </div>
             <div className="dashboard-container">
-                <div className="tasks-calender-wrapper"></div>
-                <div className="deals-wrapper"></div>
-                <div className="tasks-pie-chart-wrapper"></div>
+                <div className="tasks-wrapper">
+                    <Tasks />
+                </div>
+                <div className="deals-wrapper">
+                    <DealsChart />
+                </div>
+                <div className="tasks-pie-chart-wrapper">
+                    <TasksChart />
+                </div>
             </div>
         </div>
     )

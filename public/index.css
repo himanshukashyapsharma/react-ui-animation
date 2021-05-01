@@ -159,24 +159,208 @@ body {
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 30px;
-    padding: 30px
+    padding: 36px
 }
 
-.tasks-calender-wrapper {
+/* / */
+.tasks-wrapper {
     grid-row: 1/3;
-    background-color: antiquewhite;
+    background: #FFFFFF;
+    padding: 0 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
 }
 
-.deals-wrapper {
-    background-color: aqua;
+.tasks-top {
+    border-bottom: 1px solid #EBEFF2;
 }
 
-.tasks-pie-chart-wrapper {
-    background-color: #90A0B7;
+.task-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0 2px 0 ;
 }
+
+.calender-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 2px;
+}
+
+.date {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+}
+
+.tasks-card {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 16px;
+    margin: 24px 0;
+}
+
+.tasks-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 7px;
+}
+
+.tasks-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.tasks-card-button {
+    color: white;
+    Width: 84px;
+    Height: 22px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.tasks-card-profile-image {
+    border-radius: 50%;
+}
+
+.tasks-card-profile-wrapper {
+    display: flex;
+    align-items: center;
+
+}
+
+/* / */
+
+.deals-wrapper, .tasks-pie-chart-wrapper  {
+    background: #FFFFFF;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    padding: 0 24px;
+}
+
+.chart-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #EBEFF2;
+}
+
+.chart-select {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #6A707E;
+}
+
+/* //////Progress Bar////// */
+
+  progress {
+    border: none;
+    width: 100%;
+    height: 4px;
+    background: #2ED47A;
+  }
+  
+  progress {
+    background: #EBEFF2;
+  }
+  
+  progress::-webkit-progress-value {
+    background: #2ED47A;
+  }
+  
+  progress::-moz-progress-bar {
+    background: #EBEFF2;
+  }
+  
+  progress::-webkit-progress-value {
+    background: #2ED47A;
+  }
+  
+  progress::-webkit-progress-bar {
+    background: #EBEFF2;
+  }
+
+/* //////Progress Bar////// */
+
 
 /* /// */
 
 .font-15 {
     font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+}
+
+.font-13 {
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+}
+
+.font-12 {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+
+.padding-20 {
+    margin: 16px 0;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+/* colors */
+
+.profile-grey {
+    color: #4C5862;
+}
+
+.grey {
+    color: #90A0B7;
+}
+
+.dark-grey {
+    color: #4C5862;
+}
+
+.table-grey {
+    color: #707683;
+}
+
+.dark-blue {
+    color: #334D6E;
+}
+
+.black {
+    color: #192A3E;
+}
+
+.table-black {
+    color: #323C47
+}
+
+/* background colors */
+
+.bg-green {
+    background: #2ED47A;
+}
+
+.bg-red {
+    background: #F7685B;
 }
