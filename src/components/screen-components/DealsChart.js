@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import Chart from "react-apexcharts";
+import { animated } from 'react-spring'
 
-const DealsChart = () => {
+
+const DealsChart = ({DealsAnimation}) => {
 
     const [state, SetState] = useState({
         series: [{
@@ -32,13 +34,13 @@ const DealsChart = () => {
           }
     })
 
-    return (<>
+    return (<animated.div style={DealsAnimation} className="deals-wrapper">
               <div className="chart-header">
                 <span className="font-15 black">Deals</span>
                 <span className="chart-select">Show: Monthly</span>
               </div>
               <Chart options={state.options} series={state.series} type="area" />
-          </>)
+          </animated.div>)
 }
 
 export default DealsChart

@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import Chart from "react-apexcharts";
+import { animated } from 'react-spring'
 
-const TasksChart = () => {
+
+const TasksChart = ({TasksChartAnimation}) => {
 
     const [state, SetState] = useState({
           
@@ -27,13 +29,13 @@ const TasksChart = () => {
         
     })
     
-    return (<>
+    return (<animated.div style={TasksChartAnimation} className="tasks-pie-chart-wrapper">
               <div className="chart-header">
                 <span className="font-15 black">Tasks</span>
                 <span className="chart-select">Show: Monthly</span>
               </div>
               <Chart options={state.options} series={state.series} type="donut" />
-          </>)
+          </animated.div>)
 }
 
 export default TasksChart

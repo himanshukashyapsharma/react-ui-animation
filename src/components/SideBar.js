@@ -1,12 +1,12 @@
 import React from 'react'
-import {useSpring, animated} from 'react-spring'
+import { animated} from 'react-spring'
 
-function SideBar() {
+function SideBar({slideRightSideBar}) {
 
-    const slideRight = useSpring({from: {transform: "translateX(-256px)"}, to: {transform: "translateX(0px)"}})
+    // const slideRight = useSpring({from: {transform: "translateX(-256px)"}, to: {transform: "translateX(0px)"}})
 
     return (
-            <animated.div style={slideRight} className="side-bar">
+            <animated.div style={slideRightSideBar} className="side-bar">
             {/* side bar top  */}
                 <div className="side-bar-top">
                     <div className="saas-kit-container">
