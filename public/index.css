@@ -365,3 +365,12 @@ body {
 .bg-red {
     background: #F7685B;
 }
+
+/*  */
+
+.center {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

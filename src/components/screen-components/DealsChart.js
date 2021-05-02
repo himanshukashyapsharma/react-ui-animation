@@ -3,7 +3,7 @@ import Chart from "react-apexcharts";
 import { animated } from 'react-spring'
 
 
-const DealsChart = ({DealsAnimation}) => {
+const DealsChart = ({DealsAnimation, slideLeftText}) => {
 
     const [state, SetState] = useState({
         series: [{
@@ -36,10 +36,10 @@ const DealsChart = ({DealsAnimation}) => {
 
     return (<animated.div style={DealsAnimation} className="deals-wrapper">
               <div className="chart-header">
-                <span className="font-15 black">Deals</span>
-                <span className="chart-select">Show: Monthly</span>
+                <animated.span style={slideLeftText} className="font-15 black">Deals</animated.span>
+                <animated.span style={slideLeftText} className="chart-select">Show: Monthly</animated.span>
               </div>
-              <Chart options={state.options} series={state.series} type="area" />
+                <Chart options={state.options} series={state.series} type="area" />
           </animated.div>)
 }
 

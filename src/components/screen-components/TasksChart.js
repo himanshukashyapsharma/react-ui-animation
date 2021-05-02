@@ -3,7 +3,7 @@ import Chart from "react-apexcharts";
 import { animated } from 'react-spring'
 
 
-const TasksChart = ({TasksChartAnimation}) => {
+const TasksChart = ({TasksChartAnimation, slideLeftText}) => {
 
     const [state, SetState] = useState({
           
@@ -31,8 +31,8 @@ const TasksChart = ({TasksChartAnimation}) => {
     
     return (<animated.div style={TasksChartAnimation} className="tasks-pie-chart-wrapper">
               <div className="chart-header">
-                <span className="font-15 black">Tasks</span>
-                <span className="chart-select">Show: Monthly</span>
+                <animated.span style={slideLeftText} className="font-15 black">Tasks</animated.span>
+                <animated.span style={slideLeftText} className="chart-select">Show: Monthly</animated.span>
               </div>
               <Chart options={state.options} series={state.series} type="donut" />
           </animated.div>)

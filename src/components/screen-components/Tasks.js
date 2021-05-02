@@ -1,68 +1,69 @@
 import React from 'react'
-import { animated } from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 
-const Tasks = ({TasksAnimation}) => {
+const Tasks = ({TasksAnimation, slideUp, slideRightText}) => {
+
     return (
         <animated.div style={TasksAnimation} className="tasks-wrapper">
             <div className="tasks-top">
                 <div className="task-header">
-                    <span className="font-13 dark-blue">8 Tasks completed out of 20</span>
-                    <span className="chart-select">Show: This Week</span>
+                    <animated.span style={slideRightText} className="font-13 dark-blue">8 Tasks completed out of 20</animated.span>
+                    <animated.span style={slideRightText} className="chart-select">Show: This Week</animated.span>
                 </div>
                 <div>
-                    <progress max="10" value="8"></progress>
+                    <animated.progress style={slideRightText} max="10" value={slideRightText.number}></animated.progress>
                 </div>
                 <div>
-                    <div className="padding-20"><span className="font-15 black">23 December, Sunday</span></div>
-                    <div className="calender-container">
-                        <div>
+                    <animated.div style={slideRightText} className="padding-20"><span className="font-15 black">23 December, Sunday</span></animated.div>
+                    <animated.div style={slideUp} className="calender-container">
+                        <div className="center">
                             <span className="font-13 dark-blue opacity-50">Sun</span>
                             <div className="date">
                                 <span className="font-12 profile-grey">23</span>
                             </div>
                         </div>
-                        <div>
+                        <div className="center">
                             <span className="font-13 dark-blue opacity-50">Mon</span>
                             <div className="date">
                                 <span className="font-12 profile-grey">24</span>
                             </div>
                         </div>
-                        <div>
+                        <div className="center">
                             <span className="font-13 dark-blue opacity-50">Tue</span>
                             <div className="date">
                                 <span className="font-12 profile-grey">25</span>
                             </div>
                         </div>
-                        <div>
+                        <div className="center">
                             <span className="font-13 dark-blue opacity-50">Wed</span>
                             <div className="date">
                                 <span className="font-12 profile-grey">26</span>
                             </div>
                         </div>
-                        <div>
+                        <div className="center">
                             <span className="font-13 dark-blue opacity-50">Thu</span>
                             <div className="date">
                                 <span className="font-12 profile-grey">27</span>
                             </div>
                         </div>
-                        <div>
+                        <div className="center">
                             <span className="font-13 dark-blue opacity-50">Fri</span>
                             <div className="date">
                                 <span className="font-12 profile-grey">28</span>
                             </div>
                         </div>
-                        <div>
+                        <div className="center">
                             <span className="font-13 dark-blue opacity-50">Sat</span>
                             <div className="date">
                                 <span className="font-12 profile-grey">29</span>
                             </div>
                         </div>
-                    </div>
+                    </animated.div>
                 </div>
             </div>
             {/* task calender bottom */}
             <div className="tasks-bottom">
-                <div className="tasks-card">
+                <animated.div style={slideUp} className="tasks-card">
                     <div className="tasks-card-top">
                         <span className="font-15 table-black">Send benefit review by Sunday</span>
                         <span className="font-12 grey">Reminder</span>
@@ -77,8 +78,8 @@ const Tasks = ({TasksAnimation}) => {
                         </div>
                         <button className="tasks-card-button bg-green">Completed</button>
                     </div>
-                </div>
-                <div className="tasks-card">
+                </animated.div>
+                <animated.div style={slideUp} className="tasks-card">
                     <div className="tasks-card-top">
                         <span className="font-15 table-black">Invite to office meet-up</span>
                         <span className="font-12 grey">Call</span>
@@ -93,8 +94,8 @@ const Tasks = ({TasksAnimation}) => {
                         </div>
                         <button className="tasks-card-button bg-red">Ended</button>
                     </div>
-                </div>
-                <div className="tasks-card">
+                </animated.div>
+                <animated.div style={slideUp} className="tasks-card">
                     <div className="tasks-card-top">
                         <span className="font-15 table-black">Office meet-up</span>
                         <span className="font-12 grey">Event</span>
@@ -109,7 +110,7 @@ const Tasks = ({TasksAnimation}) => {
                         </div>
                         <button className="tasks-card-button bg-green">Completed</button>
                     </div>
-                </div>
+                </animated.div>
             </div>
         </animated.div>
     )
