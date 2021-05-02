@@ -20,9 +20,10 @@ body {
     /* position: absolute; */
     display: grid;
     z-index: 1;
+    overflow-x: hidden;
     grid-template-rows: 49% 51%;
     background-color: white;
-    width: 256px;
+    max-width: 256px;
     /* transform: translateX(-256px); */
     left: 0px;
     top: 0px;
@@ -60,6 +61,13 @@ body {
 .profile-container {
     display: flex;
     padding: 12px 24px;
+    transition: padding 0.5s;
+}
+
+.profile-container-closed {
+    display: flex;
+    padding: 12px 6px;
+    transition: padding 0.5s;
 }
 
 .profile-image {
@@ -373,4 +381,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.opacity-0 {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms;
 }

@@ -89,7 +89,7 @@ const Tasks = ({TasksAnimation, slideUp, slideRightText}) => {
                     </div>
                     <div  className="tasks-card-bottom">
                         <div className="tasks-card-profile-wrapper">
-                            <img className="tasks-card-profile-image" src="/images/tasks-card/1.png" alt="profile-small" />
+                            <img className="tasks-card-profile-image" src="/images/tasks-card/2.png" alt="profile-small" />
                             &nbsp;&nbsp;&nbsp;<span className="font-13 table-grey">Rebecca Moore</span>
                         </div>
                         <button className="tasks-card-button bg-red">Ended</button>
@@ -105,7 +105,7 @@ const Tasks = ({TasksAnimation, slideUp, slideRightText}) => {
                     </div>
                     <div  className="tasks-card-bottom">
                         <div className="tasks-card-profile-wrapper">
-                            <img className="tasks-card-profile-image" src="/images/tasks-card/1.png" alt="profile-small" />
+                            <img className="tasks-card-profile-image" src="/images/tasks-card/3.png" alt="profile-small" />
                             &nbsp;&nbsp;&nbsp;<span className="font-13 table-grey">Lindsey Stroud</span>
                         </div>
                         <button className="tasks-card-button bg-green">Completed</button>
