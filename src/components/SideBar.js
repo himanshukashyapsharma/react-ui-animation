@@ -36,9 +36,8 @@ function SideBar({ slideRightSideBar, isSideBarOpen, setIsSideBarOpen }) {
 						<img className="profile-image" src="images/profile-image.png" alt="profile" />
 					</div>
 					{showElements ? (
-						<div className={`${!isSideBarOpen ? "opacity-0" : ""}`}>
+						<div className={`profile-text-container ${!isSideBarOpen ? "opacity-0" : ""}`}>
 							<span className="profile-name">Sierra Ferguson</span>
-							<br />
 							<span className="profile-email">s.ferguson@gmail.com</span>
 						</div>
 					) : null}
