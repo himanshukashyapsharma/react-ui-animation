@@ -71,13 +71,4 @@ export const contacts = [
 		recentActivity: "20 Minutes ago",
 		image: "/images/tasks-card/2.png",
 	},
-	{
-		name: "Lindsey Stroud",
-		email: "indsey.stroud@gmail.com",
-		company: "Slack",
-		role: "manager",
-		forecast: "45%",
-		recentActivity: "5 Minutes ago",
-		image: "/images/tasks-card/3.png",
-	},
 ];

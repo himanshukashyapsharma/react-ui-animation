@@ -463,6 +463,7 @@ tr:hover {
 	border: 2px solid #d5d5d5;
 	box-sizing: border-box;
 	border-radius: 4px;
+	cursor: pointer;
 }
 
 /*  */
