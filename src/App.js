@@ -4,7 +4,7 @@ import { useSpring } from "react-spring";
 import Screen from "./components/Screen";
 import SideBar from "./components/SideBar";
 
-function App() {
+const App = () => {
 	const [isSideBarOpen, setIsSideBarOpen] = useState(true);
 
 	const slideRightSideBar = useSpring({
@@ -20,6 +20,6 @@ function App() {
 			<Screen slideDownSearchBar={slideDownSearchBar} isSideBarOpen={isSideBarOpen} />
 		</div>
 	);
-}
+};
 
 export default App;

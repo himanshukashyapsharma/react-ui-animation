@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { animated } from "react-spring";
 
 function SideBar({ slideRightSideBar, isSideBarOpen, setIsSideBarOpen }) {
@@ -43,16 +44,20 @@ function SideBar({ slideRightSideBar, isSideBarOpen, setIsSideBarOpen }) {
 					) : null}
 				</div>
 				<div className="side-bar-menu-wrapper">
-					<div className="side-bar-menu-svg-container">
-						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M1.5 8.13333C1.33431 8.13333 1.2 7.99902 1.2 7.83333V1.5C1.2 1.33431 1.33431 1.2 1.5 1.2H6.16667C6.33235 1.2 6.46667 1.33431 6.46667 1.5V7.83333C6.46667 7.99902 6.33235 8.13333 6.16667 8.13333H1.5ZM1.5 14.8C1.33431 14.8 1.2 14.6657 1.2 14.5V11.5C1.2 11.3343 1.33431 11.2 1.5 11.2H6.16667C6.33235 11.2 6.46667 11.3343 6.46667 11.5V14.5C6.46667 14.6657 6.33235 14.8 6.16667 14.8H1.5ZM9.83333 14.8C9.66765 14.8 9.53333 14.6657 9.53333 14.5V8.16667C9.53333 8.00098 9.66765 7.86667 9.83333 7.86667H14.5C14.6657 7.86667 14.8 8.00098 14.8 8.16667V14.5C14.8 14.6657 14.6657 14.8 14.5 14.8H9.83333ZM9.53333 1.5C9.53333 1.33431 9.66765 1.2 9.83333 1.2H14.5C14.6657 1.2 14.8 1.33431 14.8 1.5V4.5C14.8 4.66569 14.6657 4.8 14.5 4.8H9.83333C9.66765 4.8 9.53333 4.66569 9.53333 4.5V1.5Z"
-								stroke="#C2CFE0"
-								stroke-width="1.4"
-							/>
-						</svg>
-					</div>
-					<span className={`side-bar-menu-text ${!isSideBarOpen ? "opacity-0" : ""}`}>&nbsp;&nbsp;{!!showElements ? "Dashboard" : ""}</span>
+					<Link to="/dashboard" activeClassName="active-link">
+						<div className="side-bar-menu-svg-container">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M1.5 8.13333C1.33431 8.13333 1.2 7.99902 1.2 7.83333V1.5C1.2 1.33431 1.33431 1.2 1.5 1.2H6.16667C6.33235 1.2 6.46667 1.33431 6.46667 1.5V7.83333C6.46667 7.99902 6.33235 8.13333 6.16667 8.13333H1.5ZM1.5 14.8C1.33431 14.8 1.2 14.6657 1.2 14.5V11.5C1.2 11.3343 1.33431 11.2 1.5 11.2H6.16667C6.33235 11.2 6.46667 11.3343 6.46667 11.5V14.5C6.46667 14.6657 6.33235 14.8 6.16667 14.8H1.5ZM9.83333 14.8C9.66765 14.8 9.53333 14.6657 9.53333 14.5V8.16667C9.53333 8.00098 9.66765 7.86667 9.83333 7.86667H14.5C14.6657 7.86667 14.8 8.00098 14.8 8.16667V14.5C14.8 14.6657 14.6657 14.8 14.5 14.8H9.83333ZM9.53333 1.5C9.53333 1.33431 9.66765 1.2 9.83333 1.2H14.5C14.6657 1.2 14.8 1.33431 14.8 1.5V4.5C14.8 4.66569 14.6657 4.8 14.5 4.8H9.83333C9.66765 4.8 9.53333 4.66569 9.53333 4.5V1.5Z"
+									stroke="#C2CFE0"
+									stroke-width="1.4"
+								/>
+							</svg>
+						</div>
+					</Link>
+					<Link to="/dashboard" activeClassName="active-link" className="link">
+						<span className={`side-bar-menu-text ${!isSideBarOpen ? "opacity-0" : ""}`}>&nbsp;&nbsp;{!!showElements ? "Dashboard" : ""}</span>
+					</Link>
 					<div className="side-bar-menu-svg-container">
 						<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -74,16 +79,20 @@ function SideBar({ slideRightSideBar, isSideBarOpen, setIsSideBarOpen }) {
 						</svg>
 					</div>
 					<span className={`side-bar-menu-text ${!isSideBarOpen ? "opacity-0" : ""}`}>&nbsp;&nbsp;{!!showElements ? "Email" : ""}</span>
-					<div className="side-bar-menu-svg-container">
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M6.81112 6.11106C6.81112 4.34905 8.238 2.92217 10 2.92217C11.762 2.92217 13.1889 4.34904 13.1889 6.11106C13.1889 7.87307 11.762 9.29995 10 9.29995C8.238 9.29995 6.81112 7.87307 6.81112 6.11106ZM2.92223 14.8611C2.92223 14.4716 3.11175 14.0787 3.54723 13.6768C3.98746 13.2705 4.63073 12.904 5.39799 12.5966C6.93364 11.9814 8.7896 11.6722 10 11.6722C11.2104 11.6722 13.0664 11.9814 14.602 12.5966C15.3693 12.904 16.0126 13.2705 16.4528 13.6768C16.8883 14.0787 17.0778 14.4716 17.0778 14.8611V17.0777H2.92223V14.8611Z"
-								stroke="#C2CFE0"
-								stroke-width="1.4"
-							/>
-						</svg>
-					</div>
-					<span className={`side-bar-menu-text ${!isSideBarOpen ? "opacity-0" : ""}`}>&nbsp;&nbsp;{!!showElements ? "Contacts" : ""}</span>
+					<Link to="/contacts" activeClassName="active-link">
+						<div className="side-bar-menu-svg-container">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M6.81112 6.11106C6.81112 4.34905 8.238 2.92217 10 2.92217C11.762 2.92217 13.1889 4.34904 13.1889 6.11106C13.1889 7.87307 11.762 9.29995 10 9.29995C8.238 9.29995 6.81112 7.87307 6.81112 6.11106ZM2.92223 14.8611C2.92223 14.4716 3.11175 14.0787 3.54723 13.6768C3.98746 13.2705 4.63073 12.904 5.39799 12.5966C6.93364 11.9814 8.7896 11.6722 10 11.6722C11.2104 11.6722 13.0664 11.9814 14.602 12.5966C15.3693 12.904 16.0126 13.2705 16.4528 13.6768C16.8883 14.0787 17.0778 14.4716 17.0778 14.8611V17.0777H2.92223V14.8611Z"
+									stroke="#C2CFE0"
+									stroke-width="1.4"
+								/>
+							</svg>
+						</div>
+					</Link>
+					<Link to="/contacts" activeClassName="active-link" className="link">
+						<span className={`side-bar-menu-text ${!isSideBarOpen ? "opacity-0" : ""}`}>&nbsp;&nbsp;{!!showElements ? "Contacts" : ""}</span>
+					</Link>
 					<div className="side-bar-menu-svg-container">
 						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path

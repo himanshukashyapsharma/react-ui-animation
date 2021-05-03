@@ -112,6 +112,10 @@ body {
 	align-items: center;
 }
 
+.active-link {
+	color: #109cf1;
+}
+
 .side-bar-menu-svg-container {
 	display: flex;
 	justify-content: center;
@@ -125,6 +129,8 @@ body {
 	line-height: 19px;
 	color: #334d6e;
 	cursor: pointer;
+	text-decoration: none;
+	transition: color 150ms;
 }
 
 .toggle-side-bar-text {
@@ -133,11 +139,18 @@ body {
 	line-height: 16.5px;
 	color: #90a0b7;
 	cursor: pointer;
+	transition: color 150ms;
 }
 
 .side-bar-menu-text:hover,
 .toggle-side-bar-text:hover {
 	color: #109cf1;
+}
+
+.link {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
 }
 
 /*   Screen   */
@@ -280,7 +293,8 @@ body {
 	cursor: pointer;
 }
 
-.tasks-card-profile-image {
+.tasks-card-profile-image,
+.contacts-card-profile-image {
 	border-radius: 50%;
 }
 
@@ -351,6 +365,114 @@ progress::-webkit-progress-bar {
 
 /* //////Progress Bar////// */
 
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Contacts>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.contacts-container {
+	display: flex;
+	flex-direction: column;
+	padding: 36px;
+}
+
+.contacts-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.add-contact {
+	width: 160px;
+	height: 42px;
+	background: #109cf1;
+	box-shadow: 0px 4px 10px rgba(16, 156, 241, 0.24);
+	border-radius: 4px;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 19px;
+	text-align: center;
+	letter-spacing: 0.01em;
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
+	transition: box-shadow 200ms;
+}
+
+.add-contact:hover {
+	box-shadow: 0px 4px 10px rgba(16, 156, 241, 0.6);
+}
+
+.contact-list-container {
+	margin: 24px 0;
+	border-radius: 4px;
+	background: white;
+}
+
+/* .contact-list-header,
+.contact-list-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 14px 24px;
+	border-radius: 4px;
+	border-bottom: 1px solid #ebeff2;
+} */
+
+.th-text {
+	font-size: 13px;
+	line-height: 19px;
+	letter-spacing: 0.01em;
+	opacity: 0.5;
+}
+
+.td-text {
+	font-size: 13px;
+	line-height: 19px;
+	letter-spacing: 0.01em;
+	font-weight: 400;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+tr {
+	border-bottom: 1px solid #ebeff2;
+	cursor: pointer;
+	transition: box-shadow 200ms;
+}
+
+tr:hover {
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.td {
+	padding: 22px 24px;
+	text-align: left;
+}
+
+.th {
+	padding: 12px 24px;
+	text-align: left;
+}
+
+.checkbox-wrapper {
+	padding-left: 24px;
+	width: 20px;
+}
+
+.contact-checkbox {
+	border: 2px solid #d5d5d5;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+/*  */
+
+.contacts-table {
+	width: 100%;
+}
+
+/*  */
+
 /* /// */
 
 .font-15 {
@@ -396,6 +518,10 @@ progress::-webkit-progress-bar {
 
 .table-grey {
 	color: #707683;
+}
+
+.filter-grey {
+	color: #6a707e;
 }
 
 .dark-blue {
