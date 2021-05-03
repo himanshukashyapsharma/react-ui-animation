@@ -1,48 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Chart from "react-apexcharts";
-import { useTransition, config, animated } from "react-spring";
+import { animated } from "react-spring";
+
+import { tasksChartState } from "../../../data";
+
+import { useChartTransition } from "../../../animations";
 
 const TasksChart = ({ TasksChartAnimation, slideLeftText }) => {
-	const [showChart, SetShowChart] = useState(false);
-
-	useEffect(() => {
-		setTimeout(() => {
-			SetShowChart(true);
-		}, 2000);
-	}, []);
-
-	const [state, SetState] = useState({
-		series: [26, 59, 15],
-		options: {
-			chart: {
-				type: "donut",
-			},
-			labels: ["Active", "Completed", "Ended"],
-			responsive: [
-				{
-					breakpoint: 480,
-					options: {
-						chart: {
-							width: 200,
-						},
-						legend: {
-							position: "bottom",
-						},
-					},
-				},
-			],
-		},
-	});
-
-	///////////////////
-	const transitions = useTransition(showChart, {
-		from: { opacity: 0 },
-		enter: { opacity: 1 },
-		leave: { opacity: 0 },
-		delay: 2000,
-		config: config.molasses,
-	});
-	///////////////////
+	const transitions = useChartTransition(2000);
 
 	return (
 		<animated.div style={TasksChartAnimation} className="tasks-pie-chart-wrapper">
@@ -58,7 +23,7 @@ const TasksChart = ({ TasksChartAnimation, slideLeftText }) => {
 				(style, item) =>
 					item && (
 						<animated.div style={style}>
-							<Chart options={state.options} series={state.series} type="donut" />
+							<Chart options={tasksChartState.options} series={tasksChartState.series} type="donut" />
 						</animated.div>
 					)
 			)}

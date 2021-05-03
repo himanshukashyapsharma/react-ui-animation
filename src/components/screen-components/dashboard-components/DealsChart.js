@@ -1,58 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Chart from "react-apexcharts";
 import { animated } from "react-spring";
 
-import { useTransition, config } from "react-spring";
+import { dealsChartState } from "../../../data";
+
+import { useChartTransition } from "../../../animations";
 
 const DealsChart = ({ DealsAnimation, slideLeftText }) => {
-	const [showChart, SetShowChart] = useState(false);
-
-	useEffect(() => {
-		setTimeout(() => {
-			SetShowChart(true);
-		}, 1500);
-	}, []);
-
-	const [state, SetState] = useState({
-		series: [
-			{
-				name: "Deals",
-				data: [50, 155, 55, 150],
-			},
-		],
-		options: {
-			chart: {
-				// height: 300,
-				width: "100%",
-				type: "area",
-			},
-			dataLabels: {
-				enabled: false,
-			},
-			stroke: {
-				curve: "smooth",
-			},
-			xaxis: {
-				type: "datetime",
-				categories: ["2018-12-01", "2018-12-08", "2018-12-16", "2018-12-30"],
-			},
-			tooltip: {
-				x: {
-					format: "dd/MM/yy",
-				},
-			},
-		},
-	});
-
-	///////////////////
-	const transitions = useTransition(showChart, {
-		from: { opacity: 0 },
-		enter: { opacity: 1 },
-		leave: { opacity: 0 },
-		delay: 2000,
-		config: config.molasses,
-	});
-	///////////////////
+	const transitions = useChartTransition(1500);
 
 	return (
 		<animated.div style={DealsAnimation} className="deals-wrapper">
@@ -68,7 +23,7 @@ const DealsChart = ({ DealsAnimation, slideLeftText }) => {
 				(style, item) =>
 					item && (
 						<animated.div style={style}>
-							<Chart options={state.options} series={state.series} type="area" />
+							<Chart options={dealsChartState.options} series={dealsChartState.series} type="area" />
 						</animated.div>
 					)
 			)}

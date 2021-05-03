@@ -72,3 +72,59 @@ export const contacts = [
 		image: "/images/tasks-card/2.png",
 	},
 ];
+
+////////////////////////////////
+
+export const tasksChartState = {
+	series: [26, 59, 15],
+	options: {
+		chart: {
+			type: "donut",
+		},
+		labels: ["Active", "Completed", "Ended"],
+		responsive: [
+			{
+				breakpoint: 480,
+				options: {
+					chart: {
+						width: 200,
+					},
+					legend: {
+						position: "bottom",
+					},
+				},
+			},
+		],
+	},
+};
+
+export const dealsChartState = {
+	series: [
+		{
+			name: "Deals",
+			data: [50, 155, 55, 150],
+		},
+	],
+	options: {
+		chart: {
+			// height: 300,
+			width: "100%",
+			type: "area",
+		},
+		dataLabels: {
+			enabled: false,
+		},
+		stroke: {
+			curve: "smooth",
+		},
+		xaxis: {
+			type: "datetime",
+			categories: ["2018-12-01", "2018-12-08", "2018-12-16", "2018-12-30"],
+		},
+		tooltip: {
+			x: {
+				format: "dd/MM/yy",
+			},
+		},
+	},
+};
